@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var sit = [];
+		function allocator()
+		{
+			if(st.value == "")
+			{
+				sit.push(fname.value);
+				ss = sit.length;
+				ss--;
+				alert(fname.value +" has been assigned to seat number "+ss);
+			}
+			else
+			{
+				if(sit[st.value] == undefined)
+				{
+					sit[st.value] = fname.value;
+				}
+				else
+				{
+					alert("This seat is already taken by "+sit[st.value]);
+				}
+			}
+		}	
+		
+		function sOccupant()
+		{
+			alert(sit[s.value]);
+		}
+	</script>
+</head>
+<body>
+<table align="center" border="1">
+    <tr>
+        <td align=center colspan="2">Sit Allocator 3.0</td>
+    </tr>
+    <tr>
+        <td>Name:</td><td><input type="text" id="fname" name=""></td>
+    </tr>
+    <tr>
+        <td>Seat #:</td><td><input type="text" id="st" name=""></td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2"><button onclick="allocator()">ALLOCATE</button></td>
+    </tr>
+<p>
+
+<table align="center" border="1">
+    <tr>
+        <td align=center colspan="2">Find Occupant</td>
+    </tr>
+    <tr>
+        <td>Sit Number:</td><td><input type="text" id="s" name=""></td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2"><button onclick="sOccupant()">Show Occupant</button></td>
+    </tr>
+</table>
+</body>
+</html>

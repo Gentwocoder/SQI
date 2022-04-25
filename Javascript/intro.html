@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS INTRO</title>
+    <link rel="stylesheet" href="intro.js">
+    <script>
+		//OOP
+		function countDown()
+		{
+			var seconds = s.value;
+			if(seconds > 1)
+			{
+				seconds = seconds - 1;
+			}
+			else
+			{
+				var minute = m.value;
+				if(minute > 1)
+				{
+					minute = minute -1;
+					m.value = minute;
+					seconds = 60;
+				}
+				else
+				{
+					var hour = h.value;
+					if(hour >= 1)
+					{
+						hour = hour-1;
+						h.value = hour;
+						m.value = 60;
+						s.value = 60;
+					}
+					else
+					{
+						alert("TimeUp!!!");
+					}
+				}
+			}
+			s.value = seconds;
+			if(hour != 0 && minute != 0 && second != 0)
+			{	
+                setTimeout("countDown()",100); 
+            }
+		}
+        var v = 3;
+var r =20;
+var u = v;
+
+var result = r%v;
+//Assignments operator. +=,-=,/=,*=,%=,=
+ r += u; //var r = r+u;
+r %= u;
+ Korede = r;
+ //Unary Arithmetic operators are ++,--
+ Korede++; //Korede = Korede + 1;
+ //Comparison Operators ==,===,!=,!==,>,<,>=,<=
+ //alert(r);
+if(u == r)
+{
+	Korede--;
+}
+else
+{
+	if(r === "2")
+	{
+		Korede++;
+	}
+}
+//logical operators &&, ||, !
+
+if(Korede < r || r > u)
+{
+	Korede += 3;
+}
+// alert(Korede);
+//tenary operator ? :
+x = 3;
+y = 3;
+x--;
+y++;
+state = true;
+z = ((x == 3 && y >= 4) || state) ? x += 12 : y++;
+// alert(z)
+
+var sit=[];
+function allocator()
+{
+    sit.push(n.value);
+}
+function sOccupant()
+{
+    alert(sit[s.value]);
+}
+	</script>
+</head>
+<body>
+<table align="center" border="1">
+	<tr>
+        <td colspan="3" align="center">CountDown Timer</td>
+    </tr>
+
+
+	<tr>
+        <td><input type="text" name="" id="h" placeholder="HH"></td>
+        <td><input placeholder="MM" id="m" type="text" name=""></td>
+        <td><input type="text"  name="" id='s' placeholder="SS"></td>
+    </tr>
+
+	<tr>
+        <td colspan="3" align="center">
+            <button onclick="countDown()"> Start Counting</button>
+        </td>
+    </tr>
+
+</table>
+<br>
+
+
+<table align="center" border="1">
+    <tr>
+        <td align="center" colspan="2">Sit Allocator</td>
+    </tr>
+    <tr>
+        <td align="center" colspan="1">Name:</td>
+        <td><input type="text" id="n"></td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2"><button onclick="allocator()">Allocate</button></td>
+    </tr>
+</table>
+<table align="center" border="1">
+    <tr>
+        <td align="center" colspan="2">Find Occupant</td>
+    </tr>
+    <tr>
+        <td align="center" colspan="1">Sit number:</td>
+        <td><input type="text" id="s"></td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2"><button onclick="sOccupant()">Show Occupant</button></td>
+    </tr>
+</table>
+</body>
+</html>

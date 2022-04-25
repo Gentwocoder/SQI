@@ -1,0 +1,40 @@
+.navbar{
+font-size: 13px;
+}
+.lazyloaded{
+    height: 67px;
+    margin-left: 210px;
+}
+.collapse{
+    margin-left: 300px;
+}
+.dropdown-menu a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-menu {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.pics {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centered h3{
+    font-size: 75px;
+}
+.btn{
+    width: 150px;
+    height: 50px;
+}
+.btn:hover{
+    width: 160px;
+    
+}
+.sect-2 h3{
+    margin: 65px 0 0 550px;
+}

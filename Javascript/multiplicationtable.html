@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Generator()
+        {
+            ih = "<tr border=1>";
+            for(i=1;i<=n.value;i++)
+            {
+                ih += "<td>" +i+ "Times";
+                ih += "<table>";
+                for(r=1;r<=l.value;r++)
+                {
+                    result = r * i;
+                    ih += "<tr><td>"+i+"X"+r+ "=" +result+"</td></tr>";
+                }
+                ih += "</table>";
+                ih += "</td>";
+            }
+            ih += "</tr>";
+            multitables.innerHTML = ih;
+        }
+    </script>
+</head>
+<body>
+    <table border="1" align="center">
+        <tr>
+            <td colspan="2">
+                <b>Multiplication Table Generator</b>
+            </td>
+        </tr>
+        <tr>
+            <td>Enter Number of Blocks</td>
+            <td><input type="text" id="n"></td>
+        </tr>
+        <tr>
+            <td>Enter Number of Lines</td>
+            <td><input type="text" id="l"></td>
+        </tr>
+        <tr>
+            <td>Start From</td>
+            <td><input type="text" id="s"></td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2">
+                <button onclick="Generator()">Generate</button>
+            </td>
+        </tr>
+
+    </table>
+    <table border="1" align="center" id="multitable">
+
+    </table>
+</body>
+</html>
